@@ -3,7 +3,7 @@ defmodule KV.RegistryTest do
   # doctest KV
 
   setup do
-    {:ok, registry} = KV.Registry.start_link([])
+    registry = start_supervised!(KV.Registry) 
     %{registry: registry}
   end
 
