@@ -2,7 +2,7 @@ defmodule KV.Bucket do
   @moduledoc """
   Documentation for `KV`.
   """
-  use Agent
+  use Agent, restart: :temporary
 
   @doc """
   Starts a new bucket
